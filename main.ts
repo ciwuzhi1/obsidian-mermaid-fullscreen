@@ -106,7 +106,7 @@ export default class MermaidFullscreenPlugin extends Plugin {
 		this.positionButton(host, button, block);
 	}
 
-	// 把按钮贴到「图」的右上角，而不是整个代码块的最右侧
+	// 把按钮贴到「图」的左上角，而不是整个代码块的最左侧
 	private positionButton(host: HTMLElement, button: HTMLElement, block: HTMLElement): void {
 		const svg = block.querySelector('svg');
 		if (!svg) return;
@@ -116,9 +116,10 @@ export default class MermaidFullscreenPlugin extends Plugin {
 		if (hostRect.width === 0 || svgRect.width === 0) return;
 
 		const top = svgRect.top - hostRect.top + 8;
-		const right = hostRect.right - svgRect.right + 8;
+		const left = svgRect.left - hostRect.left + 8;
 		button.style.top = `${Math.max(4, top)}px`;
-		button.style.right = `${Math.max(4, right)}px`;
+		button.style.left = `${Math.max(4, left)}px`;
+		button.style.right = '';
 	}
 }
 

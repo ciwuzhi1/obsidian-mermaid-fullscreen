@@ -3,11 +3,11 @@
 	position: relative;
 }
 
-/* 右上角全屏按钮：沿用 Obsidian 的 .clickable-icon 外观 */
+/* 左上角全屏按钮：沿用 Obsidian 的 .clickable-icon 外观 */
 .mermaid-fs-button {
 	position: absolute;
 	top: 6px;
-	right: 6px;
+	left: 6px;
 	z-index: 10;
 	opacity: 0.45;
 	transition: opacity 120ms ease, background-color 120ms ease;
