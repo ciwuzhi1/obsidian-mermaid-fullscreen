@@ -1,0 +1,22 @@
+{
+	"name": "obsidian-mermaid-fullscreen",
+	"version": "1.0.0",
+	"description": "Obsidian plugin: fullscreen button for Mermaid diagrams with native theme rendering, zoom and pan.",
+	"main": "main.js",
+	"scripts": {
+		"dev": "node esbuild.config.mjs",
+		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production"
+	},
+	"keywords": [
+		"obsidian",
+		"mermaid",
+		"fullscreen",
+		"zoom"
+	],
+	"license": "MIT",
+	"devDependencies": {
+		"esbuild": "^0.25.0",
+		"obsidian": "^1.13.1",
+		"typescript": "^5.6.0"
+	}
+}
